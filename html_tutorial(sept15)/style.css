@@ -1,5 +1,5 @@
 html {
-    margin: 0;
+    margin: auto;
     padding: 5em;
 
     background-color: aliceblue;
@@ -27,6 +27,9 @@ Header{
     font-size: 3em;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+
+    width: 20em;
+    height: 10em;
 }
 
 header h1 {
@@ -43,6 +46,10 @@ img {
 main { 
     font-size: 2em;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /** FOOTER **/
