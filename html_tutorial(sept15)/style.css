@@ -32,3 +32,9 @@ main {
     font-size: 2em;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/** FOOTER **/
+footer {
+    font-size: 1em;
+    text-align: center;
+}
