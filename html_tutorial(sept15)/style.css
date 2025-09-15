@@ -2,13 +2,13 @@ html {
     margin: auto;
     padding: 5em;
 
-    background-color: aliceblue;
+    background-color: #D9D1BF;
     text-decoration: #2B2C2E;
 }
 
 /** NAV **/
 nav {
-    text-align: center;
+    text-align: left;
     font: 1em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -25,7 +25,7 @@ nav a :visited {
 /** HEADER **/
 Header{
     font-size: 3em;
-    text-align: center;
+    text-align: left;
     font-family: Arial, Helvetica, sans-serif;
 
     width: 20em;
@@ -49,11 +49,12 @@ img {
 main { 
     font-size: 2em;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
 }
 
 /** FOOTER **/
