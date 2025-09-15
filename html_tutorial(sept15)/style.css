@@ -13,6 +13,14 @@ nav {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+nav a:hover{
+    text-decoration: underline #6D3973;
+}
+
+nav a :visited {
+    text-decoration: none #2B2C2E;
+}
+
 
 /** HEADER **/
 Header{
