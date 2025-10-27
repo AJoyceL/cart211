@@ -36,10 +36,10 @@ body{
 
 /*NAV*/
 nav{
-    /* display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 40hv; */
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0.5em 0;
 
     z-index: 100;
     background-color: var(--main);
@@ -47,13 +47,14 @@ nav{
 
 nav img{
     height: 3em;
-    margin-right: auto;
 }
 
 nav div{
+   
     display: flex;
-    /* position: fixed; */
     gap: 0.5em;
+    margin-left: none; 
+    align-items: center;
 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:  var(--text);
@@ -204,14 +205,12 @@ footer a :visited{
     background-color: var(--main);
     height: 12vh;
 }
-.menu-1{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 40hv;
 
+.menu1{
+    display: flex;
+    align-items: center;
     z-index: 100;
-    background-color: var(--main);
+    padding: 0 1em;
 }
 
 .images{
@@ -322,20 +321,146 @@ footer a :visited{
 }
 
 
+/*  HAMBURGER MENU*/
+
+button{
+    border-width: 0px;
+    background-color: var(--main);
+}
+
+.hamburger-menu{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-menu button{
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: var(--main);
+}
+
+.hamburger-menu button .fa-bars{
+    cursor: pointer;
+}
+
+.close-menu{
+    display: none;
+}
+
 /* MEDIA QUERIES */
-@media (max-width: 480px){
+@media (max-width: 1024px){
+    /*  HTML/BODY*/
+    html{
+        padding: 0;
+    }
+
+    body{
+        width: 100%;
+    }
+
     /*  NAV*/
-    nav a{
-        font-size: 1em;
+    .sticky{
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: var(--header);
+    }
+
+    
+    nav{
+        margin: 0 auto;
+        margin-bottom: 50px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        line-height: 30px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 4px solid var(--header);
+        background-color: var(--header);
+        z-index: 10000;
+        color: var(--main);
+    }
+
+    .menuI{
+        display: none;
+        position: fixed;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background: var(--header);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100000;
+    }
+
+    .menuI a{
+        padding: 2em;
+        color: var(--main);
+    }
+
+    .menuI a:hover{
+        text-decoration: none;
+        color: var(--subtitle);
+        background-color: transparent;
+    }
+
+    /*  HAMBURGER MENU*/
+    .hamburger-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-deployed{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left:0;
+        background-color: var(--header);
+        z-index: 1000000;
+        padding-top: 50px;
+    }
+
+    .menu-deployed .close-menu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2em;
+        color: var(--main);
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 10000;
+    }
+
+    /*  HEADER*/
+    header{
+        padding: 2em;
     }
 
     /*  MAIN*/
+    main{
+        padding: 2em;
+    }
+
     h2{
         font-size: 2em;
     }
 
     article{
-        font-size: 1em;
+        font-size: 2em;
     }
 
     /*  SECTION*/
@@ -375,13 +500,7 @@ footer a :visited{
     /*  FOOTER*/
     footer{
         gap: 1em;
-    }
-
-    footer p{
-        font-size: 1em;
-    }
-
-    footer div{
-        gap: .5em;
+        font-size: 2em;
+        padding: 2em;
     }
 }
