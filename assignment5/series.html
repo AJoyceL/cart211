@@ -62,5 +62,23 @@
             © Joyce Angelina Lam, cart 211, fall 2025, assessment 5, credits: humansofnyarchive.com
         </p>
     </footer>
+
+        <script>
+        document.addEventListerner('DOMContentLoaded', () => {
+            const hamburgerButton = document.querrySelector ('.hamburger-menu button');
+            const closeButton = document.querrySelector('.close-menu');
+            const menuI = document.querrySelector('.menu1');
+
+            //Handles opening the menu
+            hamburger.addEventListerner('click', () => {
+                menuI.classList.add('menu-deployed');
+            });
+
+            // Handles closing the menu
+            closeButton.addEventListerner('click', () =>{
+                menuI.classList.remove('menu-deployed');
+            });
+        });
+    </script>
 </body>
 </html>
