@@ -63,19 +63,19 @@
         </p>
     </footer>
 
-        <script>
-        document.addEventListerner('DOMContentLoaded', () => {
-            const hamburgerButton = document.querrySelector ('.hamburger-menu button');
-            const closeButton = document.querrySelector('.close-menu');
-            const menuI = document.querrySelector('.menu1');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.querySelector ('.hamburger-menu button');
+            const closeButton = document.querySelector('.close-menu');
+            const menuI = document.querySelector('.menu1');
 
             //Handles opening the menu
-            hamburger.addEventListerner('click', () => {
+            hamburgerButton.addEventListener('click', () => {
                 menuI.classList.add('menu-deployed');
             });
 
             // Handles closing the menu
-            closeButton.addEventListerner('click', () =>{
+            closeButton.addEventListener('click', () =>{
                 menuI.classList.remove('menu-deployed');
             });
         });

@@ -361,11 +361,16 @@ button{
     }
 
     /*  NAV*/
+    nav div img{
+        width: 40vw;
+        height: auto;
+    }
+
     .sticky{
         position: sticky;
         top: 0;
         z-index: 100;
-        background-color: var(--header);
+        background-color: black;
     }
 
     
@@ -379,12 +384,11 @@ button{
         position: relative;
         display: flex;
         flex-wrap: wrap;
-        border-bottom: 4px solid var(--header);
-        background-color: var(--header);
         z-index: 10000;
         color: var(--main);
     }
 
+    /*  HAMBURGER MENU*/
     .menu1{
         display: none;
         position: fixed;
@@ -418,19 +422,13 @@ button{
         background-color: transparent;
     }
 
-    /*  HAMBURGER MENU*/
     .hamburger-menu{
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-
-    nav .menu1{
-        display: none;
-    }
-
-    nav .menu1.menu-deployed{
+    nav .menu-deployed{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -445,8 +443,8 @@ button{
         padding-top: 50px;
     }
 
-    nav .menu1.menu-deployed .close-menu{
-        display: block;
+    nav .close-menu{
+        display: flex;
         position: absolute;
         top: 20px;
         right: 20px;
@@ -461,6 +459,7 @@ button{
     /*  HEADER*/
     header{
         padding: 2em;
+        height: 50vh;
     }
 
     /*  MAIN*/
@@ -469,7 +468,7 @@ button{
     }
 
     h2{
-        font-size: 2em;
+        font-size: 4em;
     }
 
     article{
