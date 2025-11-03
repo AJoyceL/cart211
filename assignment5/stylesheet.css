@@ -143,7 +143,11 @@ article p{
 /* SECTION */
 section{
     display: block;
-    height: 50%;
+    height: 100%;
+}
+
+section div{
+    justify-content: space-evenly;
 }
 
 
@@ -231,7 +235,7 @@ footer a :visited{
 }
 
 .im2{
-    grid-column: 5/7;
+    grid-column: 6/8;
     grid-row: 1/2;
 }
 
@@ -246,32 +250,49 @@ footer a :visited{
 }
 
 .im5{
-    grid-column: 3/6;
+    grid-column: 3/5;
     grid-row: 4/5;
 }
-/* .box1 {
-    grid-column: 2/4;
-    grid-row: 1/3;
 
-}
-
-.box2 {
+.im6{
     grid-column: 1/3;
-    grid-row: 4/6;
+    grid-row: 3/4;
 }
 
-.box3{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 5;
+.im7{
+    grid-column: 6/8;
+    grid-row: 4/5;
 }
-.box4{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 8;
-}  */
+
+.im8{
+    grid-column: 5/6;
+    grid-row: 1/2;
+}
+
+.im8{
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.im9{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.im10{
+    grid-column: 5/6;
+    grid-row: 1/2;
+}
+
+.im11{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.im12{
+    grid-column: 5/6;
+    grid-row: 4/5;
+}
 
 .images figure{
     position: relative;
@@ -292,15 +313,17 @@ footer a :visited{
     bottom: 30px;
     left: 10px;
     background-color: #11131b;
-    padding: 8px;
+    padding: .5em;
     border-radius: 10px;
     color: var(--main);
     transition: opacity.3s ease;
 }
 
-.images figure:hover.hover-text {
+.images figure:hover div.hover-text {
     display: block;
     opacity: 1;
+    transition: opacity.3s ease;
+    z-index: 1000;
 }
 
 .images figure:hover img{
@@ -487,31 +510,76 @@ button{
 
     .images{
         display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: .5em;
-        height: auto;
+        grid-template-columns: repeat(5, 1fr); 
+        gap: .2em;
     }
 
-    .box1 {
-        grid-column: 1/3;
-        grid-row: 1/3;
+    /* GRID*/
+.im1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
 
-    }
+.im2{
+    grid-column: 4/6;
+    grid-row: 1/2;
+}
 
-    .box2 {
-        grid-column: 1/3;
-        grid-row: 5/7;
-    }
+.im3{
+    grid-column: 2/5;
+    grid-row: 2/4;
+}
 
-    .box3{
-        grid-column: 1/3;
-        grid-row: 5/7;
-    }
+.im4{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
 
-    .box4{
-        grid-column: 1/3;
-        grid-row: 9/10;
-    } 
+.im5{
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+.im6{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.im7{
+    grid-column: 4/6;
+    grid-row: 4/5;
+}
+
+.im8{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.im8{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.im9{
+    grid-column: 5/6;
+    grid-row: 3/4;
+}
+
+.im10{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.im11{
+    grid-column: 5/6;
+    grid-row: 2/3;
+}
+
+.im12{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+ 
 
     /*  FOOTER*/
     footer{
