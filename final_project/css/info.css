@@ -8,11 +8,11 @@
 
 /* ===  CSS DECLRATIONS === */
 :root{
-    --bg: #98C1D5;
-    --title: #2C6B91;
-    --subtitle: #5796BA;
-    --text: #0A2B3F;
-    --accent: #8FB5CF;
+    --bg: #DFCDCB;
+    --title: #924F55;
+    --subtitle: #BF7179;
+    --text: #42191D;
+    --accent: #DDBCBC;
 }
 
 /* === FONT DECLARATION === */
@@ -241,7 +241,7 @@ header div{
     align-items: center;
 }
 
-header button, article button{
+header button, main button{
     font-family: "Fuzzy Bubbles", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -250,11 +250,10 @@ header button, article button{
     height: auto;
     padding: 1em;
     background: var(--accent);
-    border: .2em solid var(--subtitle);
+    border: .1em solid var(--subtitle);
     border-radius: 5em;
     cursor: pointer;
-    color: var(--title);
-    font-size: 1em;
+    color: var(--subtitle);
 
     transition: transform .3s ease;
 }
@@ -286,11 +285,6 @@ main{
     align-items: center;
 }
 
-.home-main{
-    height: 15vh;
-}
-
-
 /* === ARTICLE === */
 article{
     width: auto;
@@ -302,6 +296,27 @@ article{
     align-items: center;
 }
 
+article h4{
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; 
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    font-size: 2em;
+    color: var(--subtitle);
+}
+article p{
+    font-size: 1em;
+    width: 60%;
+    text-align: justify;
+    color: var(--text);
+}
+
+article .row-div{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* === FOOTER === */
 footer{
