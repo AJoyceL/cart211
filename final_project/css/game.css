@@ -1,0 +1,57 @@
+/* ========================= */
+/* ===== QUESTIONS CSS ===== */
+/* ========================= */
+
+.fuzzy-bubbles-regular {
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.answer-btn{
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    padding: 1em;
+    margin: .5em;
+
+    background: var(--accent);
+    border: .2em solid var(--subtitle);
+    border-radius: 5em;
+    cursor: pointer;
+
+    opacity: 1;
+    transition: transform .3s ease;
+}
+
+.answer-btn:hover{
+    transform: scale(1.1);
+}
+
+.answer-btn .vanish{
+    opacity: 0;
+    transition: opacity .3s ease;
+    pointer-events: none;
+}
+
+.question{
+    padding: 2em;
+    background: var(--accent);
+    border: .2em solid var(--subtitle);
+    border-radius: 5em;
+}
+
+.question-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

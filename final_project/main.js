@@ -1,27 +1,33 @@
-        // document.addEventListener('DOMContentLoaded', () => {
-        //     const hamburgerButton = document.querySelector ('.hamburger-menu button');
-        //     const closeButton = document.querySelector('.close-menu');
-        //     const menuI = document.querySelector('.menu');
-
-        //     //Handles opening the menu
-        //     hamburgerButton.addEventListener('click', () => {
-        //         menuI.classList.add('menu-deployed');
-        //     });
-
-        //     // Handles closing the menu
-        //     closeButton.addEventListener('click', () =>{
-        //         menuI.classList.remove('menu-deployed');
-        //     });
-        // });
-
+/**
+ * HAMBURGER MENU
+ * */ 
 const openMenu = document.getElementById('open-menu');
-  const closeMenu = document.getElementById('close-menu');
-  const menu = document.getElementById('menu');
+const closeMenu = document.getElementById('close-menu');
+const menu = document.getElementById('menu');
 
-  openMenu.addEventListener('click', () => {
+openMenu.addEventListener('click', () => {
     menu.classList.add('menu-deployed');
-  });
+});
 
-  closeMenu.addEventListener('click', () => {
+closeMenu.addEventListener('click', () => {
     menu.classList.remove('menu-deployed');
-  });
+});
+
+/**
+ * BUTTON VANISH
+ */ 
+
+// const questions = document.querySelectorAll(".question-container");
+// questions.forEach(question => {
+//     const buttons = question.querySelectorAll(".answer-btn");
+//     buttons.forEach(button => {
+//         button.addEventListener("click", () => {
+//             button.classList.add("vanish");
+//             buttons.forEach(otherBtn => {
+//                 if(otherBtn !== button) {
+//                     otherBtn.classList.add("vanish");
+//                 };
+//             });
+//         });
+//     });
+// });
