@@ -1,3 +1,13 @@
+/* ===  CSS DECLRATIONS === */
+:root{
+    --bg: #98C1D5;
+    --title: #2C6B91;
+    --subtitle: #5796BA;
+    --text: #0A2B3F;
+    --accent: #8FB5CF;
+}
+
+
 /* ========================= */
 /* ===== QUESTIONS CSS ===== */
 /* ========================= */
@@ -7,7 +17,6 @@
     font-weight: 400;
     font-style: normal;
 }
-
 
 .answer-btn{
     font-family: "Fuzzy Bubbles", sans-serif;
@@ -47,6 +56,7 @@
     background: var(--accent);
     border: .2em solid var(--subtitle);
     border-radius: 5em;
+    color: var(--subtitle);
 }
 
 .question-container{
@@ -54,4 +64,5 @@
     flex-direction: column;
     justify-content: center;
 }
+
 
