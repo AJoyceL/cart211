@@ -219,6 +219,7 @@ header h1{
     color: var(--title);
     font-size: 5em;
     margin: 0;
+    text-align: center;
 }
 
 header h3{
