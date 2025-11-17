@@ -249,7 +249,7 @@ header button, main button{
 
     width: 100%;
     height: auto;
-    padding: 1em;
+    padding: .5em;
     background: var(--accent);
     border: .1em solid var(--subtitle);
     border-radius: 5em;
@@ -266,17 +266,67 @@ header button:hover, main button:hover{
 .next-btn{
     width: auto;
     height: auto;
-    font-size: 1.5em;
-    padding: .5em;
-    background: none;
+    font-size: 1em;
+    padding: 1em;
+    background: var(--accent);
     border: .1em solid var(--subtitle);
     border-radius: 5em;
+    margin: 1em;
 }
+
 .next-btn a{
     color: var(--subtitle);
     text-decoration: none;
 }
 
+/* Loop page*/
+.dark-body{
+    background: black;
+    color: white;
+    height: 100%;
+    margin: 0;
+}
+
+.black-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/*https://cssloaders.github.io/*/
+.loader {
+    width: 5em;
+    height: 5em;
+    border: .5em solid #FFF;
+    border-bottom-color: #2f00ff;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    /* justify-content: center;
+    align-items: center; */
+    animation: rotation 2s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+.loader-button{
+    background: none;
+    border: none;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
 
 /* === MAIN === */
 main{
@@ -286,10 +336,30 @@ main{
     align-items: center;
 }
 
+.source{
+    font-size: .7em;
+}
+
+.source a{
+    color: var(--text);
+    text-decoration: none;
+}
+
+.source a:hover{
+    color: var(--title);
+    text-decoration: underline;
+}
+
+.source a:visited{
+    color: var(--title);    
+}
+
+
 /* === ARTICLE === */
 article{
     width: auto;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -305,14 +375,25 @@ article h4{
     font-variation-settings:"wdth" 100;
     font-size: 2em;
     color: var(--subtitle);
+    width: 70%;
+    text-align: center;
 }
+
 article p{
     font-size: 1em;
     width: 60%;
     text-align: justify;
     color: var(--text);
+    margin: 0;
+    padding: .5em;
 }
 
+article ul{
+    width: 60%;
+    font-size: 1em;
+    text-align: justify;
+    color: var(--text);
+}
 article .row-div{
     flex-direction: row;
     justify-content: space-between;
@@ -352,3 +433,5 @@ footer a:hover{
     opacity: .6;
     transform: scale(1.2);
 }
+
+

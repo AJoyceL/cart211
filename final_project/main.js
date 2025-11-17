@@ -31,3 +31,41 @@ closeMenu.addEventListener('click', () => {
 //         });
 //     });
 // });
+
+
+/**
+ * LOOP PAGE
+*/
+
+let clickCount = 0;
+
+const defaultContent = `
+    <header>
+        <h1>Can you escape?</h1>
+        <h3>Do you wish to return to normalcy? To the beauty of oblivion? Wouldn't it feel better?</h3>
+        <div>
+            <button class="next-btn" onclick="switchContent()">Now You Know</button>
+        </div>
+    </header>
+`;
+
+const newContent = `
+    <header class= "black-screen">
+        <button id="loaderBtn" class="loader-button" onclick="switchContent()">
+            <span class="loader"></span>
+        </button>
+    </header>
+`;
+
+function switchContent() {
+    clickCount++;
+    const body = document.getElementById("mainBody");
+
+    if(clickCount <= 9) {
+        body.innerHTML = newContent;
+        body.className = "dark-body";
+    }
+    else if (clickCount === 10) {
+        window.location.href = "closing.html";
+    }
+}
