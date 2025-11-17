@@ -115,6 +115,7 @@ nav a :visited{
     position: sticky;
     top: 0;
     z-index: 10;
+    height: 10vh;
 }
 
 /* === HAMBURGER MENU CONTAINER === */

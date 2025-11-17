@@ -115,6 +115,7 @@ nav a :visited{
     position: sticky;
     top: 0;
     z-index: 10;
+    height: 10vh;
 }
 
 /* === HAMBURGER MENU CONTAINER === */
@@ -285,15 +286,27 @@ header button:hover, main button:hover{
     color: white;
     height: 100%;
     margin: 0;
+
+    animation: bgTransition 1s infinite linear; /*should be .5s*/
 }
 
-.black-screen{
+@keyframes bgTransition {
+    100% {background: blue;}
+};
+
+header.black-screen{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh !important;
     text-align: center;
+}
+
+.black-screen button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*https://cssloaders.github.io/*/
@@ -305,9 +318,7 @@ header button:hover, main button:hover{
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
-    /* justify-content: center;
-    align-items: center; */
-    animation: rotation 2s linear infinite;
+    animation: rotation 1s linear infinite;
     }
 
     @keyframes rotation {
