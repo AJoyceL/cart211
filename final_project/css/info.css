@@ -118,6 +118,12 @@ nav a :visited{
     height: 10vh;
 }
 
+.logo{
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+}
+
 /* === HAMBURGER MENU CONTAINER === */
 .menu{
     display: none;
@@ -281,25 +287,44 @@ header button:hover, main button:hover{
 }
 
 /* Loop page*/
+
+/*newContent*/
+
+.white-screen {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: .2em;
+    margin: 0;
+}
+
+.white-p {
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: .5em;
+    margin: 0;
+}
+
+/*newContent2*/
 .dark-body{
     background: black;
     color: white;
     height: 100%;
     margin: 0;
-
-    animation: bgTransition 1s infinite linear; /*should be .5s*/
 }
 
-@keyframes bgTransition {
-    100% {background: blue;}
-};
 
-header.black-screen{
+.black-screen{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh !important;
+    height: 100vh;
     text-align: center;
 }
 
@@ -311,10 +336,10 @@ header.black-screen{
 
 /*https://cssloaders.github.io/*/
 .loader {
-    width: 5em;
-    height: 5em;
-    border: .5em solid #FFF;
-    border-bottom-color: #2f00ff;
+    width: 2em;
+    height: 2em;
+    border: .2em solid #FFF;
+    border-bottom-color: black;
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
@@ -338,6 +363,34 @@ header.black-screen{
     height: 70px;
     cursor: pointer;
 }
+
+/*newContent3*/
+.flash-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: black;
+    height: 100%;
+    margin: 0;
+
+    animation: bgTransition .1s linear;
+}
+
+@keyframes bgTransition {
+    0% {background: black;}
+    100% {background: white;}
+};
+
+.black-p{
+    font-family:Arial, Helvetica, sans-serif;
+    color: black; 
+    font-size: .5em;
+    margin: 0;
+}
+
 
 /* === MAIN === */
 main{

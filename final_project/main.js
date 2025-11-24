@@ -66,7 +66,7 @@ const questions = [
         b: "Convenience"
     },
     {
-        q: "If an app feels ‘personalized,’ do you like it or get suspicious?",
+        q: "If an app feels ‘personalised,’ do you like it or get suspicious?",
         a: "Like it",
         b: "Suspicious"
     },
@@ -134,35 +134,35 @@ if (guessesContainer) {
     else {
         const predictions = [];
 
-        if (answers.includes("Risky")) predictions.push("You lean toward thrill-seeking behaviours.");
-        if (answers.includes("Safe")) predictions.push("You are predictable and security-oriented.");
+        if (answers.includes("Risky")) predictions.push("You definitely click “I agree” on terms and conditions without even pretending to scroll.");
+        if (answers.includes("Safe")) predictions.push("Safe? You probably read restaurant menus before arriving");
 
-        if (answers.includes("Night")) predictions.push("You are most active when the world is quiet.");
-        if (answers.includes("Morning")) predictions.push("You like structure and early productivity.");
+        if (answers.includes("Night")) predictions.push("You're basically a vampire, but instead of blood you survive on snacks and procrastination.");
+        if (answers.includes("Morning")) predictions.push("You get everything done early so you can spend the rest of the day questioning your life choices.");
 
-        if (answers.includes("Video")) predictions.push("Your mind responds strongly to visual content.");
-        if (answers.includes("Book")) predictions.push("You think in deep, structured narratives.");
+        if (answers.includes("Video")) predictions.push("You start one short video and suddenly it’s 3AM and you’re an expert on jellyfish mating rituals.");
+        if (answers.includes("Book")) predictions.push("You carry a book ‘just in case,’ even though you have zero spare time.");
 
-        if (answers.includes("Improvising")) predictions.push("You embrace spontaneity and uncertainty.");
-        if (answers.includes("Planning")) predictions.push("You prefer control and planning over chaos.");
+        if (answers.includes("Improvising")) predictions.push("Every day is a ‘we’ll figure it out’ kind of day");
+        if (answers.includes("Planning")) predictions.push("You make lists for your lists. Chaos fears you.");
 
-        if (answers.includes("Introvert")) predictions.push("You recharge through solitude.");
-        if (answers.includes("Extrovert")) predictions.push("You thrive on social energy.");
+        if (answers.includes("Introvert")) predictions.push("Your ideal party includes you, a blanket, and zero expectations.");
+        if (answers.includes("Extrovert")) predictions.push("You’re the person who says ‘one more story’ at 2 AM.about someone");
 
-        if (answers.includes("Scrolling")) predictions.push("You are influenced by passive consumption.");
-        if (answers.includes("Creating")) predictions.push("You enjoy bringing ideas to life.");
+        if (answers.includes("Scrolling")) predictions.push("You know you’ve gone too far when Instagram says ‘You’re all caught up.’”");
+        if (answers.includes("Creating")) predictions.push("You start projects faster than you finish them.");
 
-        if (answers.includes("Data")) predictions.push("You trust numbers more than instincts.");
-        if (answers.includes("Intuition")) predictions.push("Your decisions follow emotion and instinct.");
+        if (answers.includes("Data")) predictions.push("Spreadsheets are your emotional support animal.");
+        if (answers.includes("Intuition")) predictions.push("Your gut has more authority than Google.");
 
-        if (answers.includes("Algorithms")) predictions.push("Your behaviour aligns well with predictive systems.");
-        if (answers.includes("Friends")) predictions.push("Social influence shapes your decisions.");
+        if (answers.includes("Algorithms")) predictions.push("Your personality is 40% ‘You might also like…'");
+        if (answers.includes("Friends")) predictions.push("Your group chat controls your destiny.");
 
-        if (answers.includes("Privacy")) predictions.push("You resist digital tracking.");
-        if (answers.includes("Convenience")) predictions.push("You trade privacy for comfort.");
+        if (answers.includes("Privacy")) predictions.push("You cover your webcam like it’s staring back.");
+        if (answers.includes("Convenience")) predictions.push("You’d teleport to the fridge if you could.");
 
-        if (answers.includes("Like it")) predictions.push("Personalisation makes things easier for you.");
-        if (answers.includes("Suspicious")) predictions.push("You are aware of digital manipulation.");
+        if (answers.includes("Like it")) predictions.push("You love personalization so much you’d let Spotify name your firstborn.");
+        if (answers.includes("Suspicious")) predictions.push("You get ads so accurate you start questioning reality.");
 
         guessesContainer.innerHTML = `
             <h2>Hi! It's so nice to get to know you better ;)</h2>
@@ -352,22 +352,52 @@ const defaultContent = `
 `;
 
 const newContent = `
-    <body id="mainBody">
-        <header class= "black-screen">
-            <button id="loaderBtn" class="loader-button" onclick="switchContent()">
-                <span class="loader"></span>
-            </button>
-        </header>
-    </body>
+    <header class="white-screen" id="fullScreenBtn">
+        <p class="white-p">loading...</p>
+    </header>
 `;
+
+const newContent2 = `
+    <header class="black-screen" id="fullScreenBtn">
+        <div class="loader-wrapper">
+            <span class="loader"></span>
+        </div>
+    </header>
+`;
+
+const newContent3 = `
+    <header class="flash-screen" id="fullScreenBtn">
+        <p class="black-p"> Are you sure you're alone?</p>
+    </header>
+`;
+
+
 
 function switchContent() {
     clickCount++;
     const body = document.getElementById("mainBody");
 
-    if(clickCount <= 5) {
+    if(clickCount <= 2) {
         body.innerHTML = newContent;
+        body.className = "white-screen";
+        document.getElementById("fullScreenBtn")
+        .addEventListener("click", switchContent);
+        return;
+    }
+    if (clickCount === 3) {
+        body.innerHTML = newContent2;
         body.className = "dark-body";
+
+        document.getElementById("fullScreenBtn")
+        .addEventListener("click", switchContent);
+        return;
+    }
+    if(clickCount === 5) {
+        body.innerHTML = newContent3;
+        body.className = "flash-screen";
+        document.getElementById("fullScreenBtn")
+        .addEventListener("click", switchContent);
+        return;
     }
     else if (clickCount === 6) {
         window.location.href = "closing.html";

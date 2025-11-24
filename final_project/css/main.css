@@ -118,6 +118,12 @@ nav a :visited{
     height: 10vh;
 }
 
+.logo{
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+}
+
 /* === HAMBURGER MENU CONTAINER === */
 .menu{
     display: none;
