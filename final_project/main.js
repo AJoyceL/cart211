@@ -20,51 +20,70 @@ closeMenu.addEventListener('click', () => {
 */
 
 const questions = [
+     // ==== RISKY / SAFE ====
     {
         q: "Do you usually pick the safe option or the risky one?",
         a: "Safe",
         b: "Risky"
     },
+
+    // ==== NIGHT / MORNING ====
     {
         q: "Are you more productive in the morning or at night?",
         a: "Morning",
         b: "Night"
     },
+
+    // ==== BOOK / VIDEO ====
     {
         q: "Would you rather read a book or watch a video?",
         a: "Book",
         b: "Video"
     },
+
+    // ==== PLANNING / IMPROVISING ====
     {
         q: "Do you prefer planning or improvising?",
         a: "Planning",
         b: "Improvising"
     },
+
+    // ==== INTROVERT / EXTROVERT ====
     {
         q: "Are you an introvert or an extrovert?",
         a: "Introvert",
         b: "Extrovert"
     },
+
+    // ==== SCROLLING / CREATING ====
     {
         q: "Do you spend more time scrolling or creating?",
         a: "Scrolling",
         b: "Creating"
     },
+
+    // ==== INTUITION / DATA ====
     {
         q: "Do you trust your intuition or data?",
         a: "Intuition",
         b: "Data"
     },
+
+    // ==== FRIENDS / ALGORITHMS ====
     {
         q: "Are you more influenced by friends or algorithms?",
         a: "Friends",
         b: "Algorithms"
     },
+
+    // ==== PRIVACY / CONVENIENCE ====
     {
         q: "Do you value privacy or convenience more?",
         a: "Privacy",
         b: "Convenience"
     },
+
+    // ==== LIKE IT / SUSPICIOUS ====
     {
         q: "If an app feels ‘personalised,’ do you like it or get suspicious?",
         a: "Like it",
@@ -133,36 +152,190 @@ if (guessesContainer) {
     } 
     else {
         const predictions = [];
+        function pickOne(list) {
+            return list[Math.floor(Math.random() * list.length)];
+        }    
 
-        if (answers.includes("Risky")) predictions.push("You definitely click “I agree” on terms and conditions without even pretending to scroll.");
-        if (answers.includes("Safe")) predictions.push("Safe? You probably read restaurant menus before arriving");
+        // ==== RISKY / SAFE ====
+        if (answers.includes("Risky")) {
+            predictions.push(pickOne([
+                "You definitely click “I agree” on terms and conditions without even pretending to scroll.",
+                "Consequences are a future-you problem.",
+                "Your motto: ‘How bad could it be?",
+                "You make choices like you’re speed-running life."
+            ]));
+        }
+        if (answers.includes("Safe")) {
+            predictions.push(pickOne([
+                "Safe? You probably read restaurant menus before arriving.",
+                "You pack an umbrella even when it says 0% chance of rain.",
+                "You think twice… then think again… just to be safe.",
+                "You Google things like ‘is this safe’ way too often."
+            ]));
+        }
 
-        if (answers.includes("Night")) predictions.push("You're basically a vampire, but instead of blood you survive on snacks and procrastination.");
-        if (answers.includes("Morning")) predictions.push("You get everything done early so you can spend the rest of the day questioning your life choices.");
+        // ==== NIGHT / MORNING ====
+        if (answers.includes("Night")) {
+            predictions.push(pickOne([
+                "You're basically a vampire, but instead of blood you survive on snacks and procrastination.",
+                "Your sleep schedule isn’t broken — it’s jazz.",
+                "You become a genius at 1AM for absolutely no reason.",
+                "Your brain starts working at the exact moment it should be sleeping."
+            ]));
+        }
+        if (answers.includes("Morning")) {
+            predictions.push(pickOne([
+                "You get everything done early so you can spend the rest of the day questioning your life choices.",
+                "You’re basically a solar-powered human.",
+                "Your motivation rises with the sun and dies with the slightest snack break.",
+                "You peak at 9 AM and it’s downhill from there."
+            ]));
+        }
 
-        if (answers.includes("Video")) predictions.push("You start one short video and suddenly it’s 3AM and you’re an expert on jellyfish mating rituals.");
-        if (answers.includes("Book")) predictions.push("You carry a book ‘just in case,’ even though you have zero spare time.");
+        // ==== VIDEO / BOOK ====
+        if (answers.includes("Video")) {
+            predictions.push(pickOne([
+                "You start one short video and suddenly it’s 3AM and you’re an expert on jellyfish mating rituals.",
+                "Your attention span is 0.2 seconds, but hey — at least the algorithm loves you.",
+                "You watch tutorials you’ll never use in real life.",
+                "You learn more from 15-second clips than school ever taught you."
+            ]));
+        }
+        if (answers.includes("Book")) {
+            predictions.push(pickOne([
+                "You carry a book ‘just in case,’ even though you have zero spare time.",
+                "You read to relax, then get emotionally destroyed by chapter 12.",
+                "You go to the bookstore ‘just to look’… and we both know how that ends.",
+                "“Your natural habitat is ‘just one more chapter.’"
+            ]));
+        }
 
-        if (answers.includes("Improvising")) predictions.push("Every day is a ‘we’ll figure it out’ kind of day");
-        if (answers.includes("Planning")) predictions.push("You make lists for your lists. Chaos fears you.");
+        // ==== IMPROVISING / PLANNING ====
+        if (answers.includes("Improvising")) {
+            predictions.push(pickOne([
+                "Every day is a ‘we’ll figure it out’ kind of day.",
+                "You decide dinner at the exact moment your stomach growls.",
+                "You treat instructions like vague suggestions.",
+                "Somehow, it always works out… eventually."
+            ]));
+        }
+        if (answers.includes("Planning")) {
+            predictions.push(pickOne([
+                "You make lists for your lists. Chaos fears you.",
+                "You plan your snacks before the movie starts.", 
+                "You arrive early to things that don’t have a time.",
+                "You schedule your spontaneous moments."
+            ]));
+        }
 
-        if (answers.includes("Introvert")) predictions.push("Your ideal party includes you, a blanket, and zero expectations.");
-        if (answers.includes("Extrovert")) predictions.push("You’re the person who says ‘one more story’ at 2 AM.about someone");
+        // ==== INTROVERT / EXTROVERT ====
+        if (answers.includes("Introvert")) {
+            predictions.push(pickOne([
+                "Your ideal party includes you, a blanket, and zero expectations.",
+                "Your social battery dies faster than your phone at 3%.",
+                "You get tired just thinking about plans.",
+                "Your favorite part of the party: leaving."
+            ]));
+        }
+        if (answers.includes("Extrovert")) {
+            predictions.push(pickOne([
+                "You’re the person who says ‘one more story’ at 2AM.",
+                "You get energy from people like you’re solar-powered.",
+                "You talk like you’re being paid per word.",
+                "Your volume has no ‘low’ setting."
+            ]));
+        }
 
-        if (answers.includes("Scrolling")) predictions.push("You know you’ve gone too far when Instagram says ‘You’re all caught up.’”");
-        if (answers.includes("Creating")) predictions.push("You start projects faster than you finish them.");
+        // ==== SCROLLING / CREATING ====
+        if (answers.includes("Scrolling")) {
+            predictions.push(pickOne([
+                "You know it’s bad when Instagram says ‘You're all caught up.’",
+                "Your thumb has elite athletic training.",
+                "You say ‘one more video’ and lie every time.",
+                "Your finger could qualify for the Olympics."
+            ]));
+        }
+        if (answers.includes("Creating")) {
+            predictions.push(pickOne([
+                "You start projects faster than you finish them.",
+                "If inspiration calls at 3AM, you answer.",
+                "You get ideas at the worst possible times.",
+                "You don’t ‘start small,’ you start big."
+            ]));
+        }
 
-        if (answers.includes("Data")) predictions.push("Spreadsheets are your emotional support animal.");
-        if (answers.includes("Intuition")) predictions.push("Your gut has more authority than Google.");
+        // ==== DATA / INTUITION ====
+        if (answers.includes("Data")) {
+            predictions.push(pickOne([
+                "Spreadsheets are your emotional support animal.",
+                "You check the numbers before choosing a snack.",
+                "You never guess — you estimate.",
+                "Your brain runs on Excel spreadsheets."
+            ]));
+        }
+        if (answers.includes("Intuition")) {
+            predictions.push(pickOne([
+                "Your gut has more authority than Google.",
+                "Your internal GPS? Vibes only.",
+                "You make choices based on a feeling you had four days ago.",
+                "You trust the vibe check over the fact check."
+            ]));
+        }
 
-        if (answers.includes("Algorithms")) predictions.push("Your personality is 40% ‘You might also like…'");
-        if (answers.includes("Friends")) predictions.push("Your group chat controls your destiny.");
+        // ==== ALGORITHMS / FRIENDS ====
+        if (answers.includes("Algorithms")) {
+            predictions.push(pickOne([
+                "Your personality is 40% ‘You might also like…’",
+                "You and your For You Page are spiritually linked.",
+                "Your For You Page has read your soul.",
+                "Your ads know things you’ve never said out loud."
+            ]));
+        }
+        if (answers.includes("Friends")) {
+            predictions.push(pickOne([
+                "Your group chat controls your destiny.",
+                "If a friend says ‘trust me,’ you do. Immediately.",
+                "You change plans after one ‘omg same.'",
+                "You’re a ‘tell me what we’re doing’ type."
+                
+            ]));
+        }
 
-        if (answers.includes("Privacy")) predictions.push("You cover your webcam like it’s staring back.");
-        if (answers.includes("Convenience")) predictions.push("You’d teleport to the fridge if you could.");
+        // ==== PRIVACY / CONVENIENCE ====
+        if (answers.includes("Privacy")) {
+            predictions.push(pickOne([
+                "You cover your webcam like it’s staring back.",
+                "You read terms & conditions… at least once.",
+                "You cover your phone like someone might read it.",
+                "You refuse every popup on instinct."
+            ]));
+        }
+        if (answers.includes("Convenience")) {
+            predictions.push(pickOne([
+                "You’d teleport to the fridge if you could.",
+                "Your motto: ‘Is there an easier way?’",
+                "If it’s faster, it wins.",
+                "You choose the path of least resistance… always."
+            ]));
+        }
 
-        if (answers.includes("Like it")) predictions.push("You love personalization so much you’d let Spotify name your firstborn.");
-        if (answers.includes("Suspicious")) predictions.push("You get ads so accurate you start questioning reality.");
+        // ==== LIKE IT / SUSPICIOUS ====
+        if (answers.includes("Like it")) {
+            predictions.push(pickOne([
+                "You love personalization so much you’d let Spotify name your firstborn.",
+                "Careful—your fridge might start giving you pep talks someday.",
+                "If something says ‘Made just for you,’ you’re emotionally attached.",
+                "You don’t walk into stores—you walk into curated experiences."
+            ]));
+        }
+        if (answers.includes("Suspicious")) {
+            predictions.push(pickOne([
+                "You get ads so accurate you start questioning reality.",
+                "You don’t trust anything labeled ‘just for you.’ Rightfully so.",
+                "You feel emotionally threatened by personalized ads.",
+                "You see personalised recommendations and whisper, ‘Who sent you?’"
+            ]));
+        }
 
         guessesContainer.innerHTML = `
             <h2>Hi! It's so nice to get to know you better ;)</h2>
@@ -175,31 +348,30 @@ if (guessesContainer) {
                     <a href="pattern.html">See your patterns →</a>
                 </button>
             </div>
-            `;
+        `;
     }
 
     //animation
     const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
 
-            const bubbles = document.querySelectorAll(".guess-bubble");
+                const bubbles = document.querySelectorAll(".guess-bubble");
 
-            bubbles.forEach((bubble, i) => {
-                const delay = i * 150;
-                bubble.style.animationDelay = `${delay}ms`;
-                bubble.style.animationPlayState = "running";
-            });
+                bubbles.forEach((bubble, i) => {
+                    const delay = i * 150;
+                    bubble.style.animationDelay = `${delay}ms`;
+                    bubble.style.animationPlayState = "running";
+                });
 
-            observer.disconnect(); 
-        }
+                observer.disconnect(); 
+            }
+        });
+    }, {
+        threshold: 0.4  
     });
-}, {
-    threshold: 0.4  
-});
 
-observer.observe(guessesContainer);
-
+    observer.observe(guessesContainer);
 }
 
 
